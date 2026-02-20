@@ -1,0 +1,136 @@
+{
+    "business": {
+        "name": "Smile Dental Clinic",
+        "tagline": "Your Smile, Our Priority",
+        "phone": "+91 98765 43210",
+        "email": "info@smiledentalludhiana.com",
+        "address": "SCO 45, Model Town, Ludhiana, Punjab 141002",
+        "whatsapp": "+919876543210",
+        "whatsapp_message": "Hi, I'd like to book a dental appointment at Smile Dental Clinic.",
+        "working_hours": {
+            "monday": "9:00 AM - 7:00 PM",
+            "tuesday": "9:00 AM - 7:00 PM",
+            "wednesday": "9:00 AM - 7:00 PM",
+            "thursday": "9:00 AM - 7:00 PM",
+            "friday": "9:00 AM - 7:00 PM",
+            "saturday": "9:00 AM - 5:00 PM",
+            "sunday": "10:00 AM - 2:00 PM"
+        },
+        "google_maps_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.5!2d75.845!3d30.888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+    },
+    "doctors": [
+        {
+            "name": "Dr. Amanpreet Singh",
+            "title": "BDS, MDS (Orthodontics)",
+            "specialization": "Orthodontics & Cosmetic Dentistry",
+            "experience": "12+ years",
+            "bio": "Dr. Amanpreet Singh is a highly skilled dentist with over 12 years of experience in orthodontics and cosmetic dentistry. He is committed to providing pain-free, modern dental care using the latest technology.",
+            "photo": "assets/doctor.jpg"
+        }
+    ],
+    "services": [
+        {
+            "name": "Teeth Cleaning & Polishing",
+            "icon": "sparkles",
+            "description": "Professional cleaning to remove plaque and tartar for a brighter, healthier smile."
+        },
+        {
+            "name": "Root Canal Treatment",
+            "icon": "heart-pulse",
+            "description": "Pain-free root canal therapy to save damaged teeth using modern techniques."
+        },
+        {
+            "name": "Dental Implants",
+            "icon": "pin",
+            "description": "Permanent tooth replacement with natural-looking implants for a confident smile."
+        },
+        {
+            "name": "Teeth Whitening",
+            "icon": "sun",
+            "description": "Advanced whitening treatments to brighten your smile by several shades."
+        },
+        {
+            "name": "Braces & Orthodontics",
+            "icon": "align-center",
+            "description": "Straighten teeth with traditional braces or clear aligners for all ages."
+        },
+        {
+            "name": "Crowns & Bridges",
+            "icon": "shield",
+            "description": "Custom-made crowns and bridges to restore damaged or missing teeth."
+        },
+        {
+            "name": "Tooth Extraction",
+            "icon": "minus-circle",
+            "description": "Safe and gentle tooth removal with minimal discomfort and quick recovery."
+        },
+        {
+            "name": "Emergency Dental Care",
+            "icon": "alert-triangle",
+            "description": "Immediate care for dental emergencies including pain, trauma, and infections."
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "Rajinder K.",
+            "rating": 5,
+            "text": "Excellent dental care! Dr. Amanpreet was very gentle and professional. The clinic is modern and hygienic. Highly recommended!",
+            "date": "2025"
+        },
+        {
+            "name": "Simran P.",
+            "rating": 5,
+            "text": "Got my braces done here and the results are amazing. The staff is very friendly and the treatment was pain-free.",
+            "date": "2025"
+        },
+        {
+            "name": "Gurpreet S.",
+            "rating": 5,
+            "text": "Best dental clinic in Ludhiana! I've been coming here for years. Always a great experience with amazing results.",
+            "date": "2024"
+        }
+    ],
+    "design": {
+        "colors": {
+            "primary": "#2563EB",
+            "secondary": "#10B981",
+            "accent": "#F59E0B",
+            "background": "#FFFFFF",
+            "text": "#1E293B",
+            "muted": "#64748B"
+        },
+        "fonts": {
+            "primary": "Inter",
+            "secondary": "Poppins"
+        },
+        "style_keywords": "clean, professional, modern, trustworthy"
+    },
+    "sections": [
+        "navigation",
+        "hero",
+        "services",
+        "about",
+        "doctors",
+        "why_choose_us",
+        "testimonials",
+        "contact",
+        "footer"
+    ],
+    "ctas": [
+        "Book Appointment",
+        "Call Now",
+        "WhatsApp Us"
+    ],
+    "navigation": [
+        "Home",
+        "Services",
+        "About",
+        "Doctors",
+        "Contact"
+    ],
+    "seo": {
+        "title": "Smile Dental Clinic - Best Dentist in Ludhiana | Dental Implants, Braces & More",
+        "description": "Smile Dental Clinic in Model Town, Ludhiana offers professional dental care including teeth cleaning, root canal, implants, braces and more. Book your appointment today!",
+        "keywords": "dentist ludhiana, dental clinic ludhiana, teeth cleaning, root canal, dental implants, braces ludhiana, Smile Dental Clinic"
+    }
+}

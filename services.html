@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SmileBright Dental - Our Services</title>
+    <meta name="description"
+        content="Explore our full range of dental services — general, cosmetic, orthodontic, preventative & emergency care." />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .font-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+
+    <!-- ===== TOP NAVIGATION HEADER ===== -->
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between px-4 py-3 max-w-lg mx-auto">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="bg-primary p-2 rounded-lg text-white">
+                    <span class="material-symbols-outlined text-2xl">dentistry</span>
+                </div>
+                <div>
+                    <h1 class="text-lg font-extrabold tracking-tight leading-none">SmileBright</h1>
+                    <p class="text-[10px] uppercase tracking-widest font-bold text-primary">Dental Care</p>
+                </div>
+            </a>
+            <div class="flex items-center gap-2">
+                <button id="themeToggle" aria-label="Toggle dark mode"
+                    class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined dark:hidden">light_mode</span>
+                    <span class="material-symbols-outlined hidden dark:inline">dark_mode</span>
+                </button>
+                <a href="tel:+917901934386"
+                    class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined">call</span>
+                </a>
+                <a href="#" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-lg mx-auto pb-24">
+
+        <!-- ===== SEARCH SECTION ===== -->
+        <section class="px-4 pt-6">
+            <h2 class="text-2xl font-bold mb-4">Our Services</h2>
+            <div class="relative group">
+                <div
+                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+                <input id="serviceSearch"
+                    class="block w-full pl-10 pr-3 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400"
+                    placeholder="Search treatments (e.g. Whitening)..." type="text" />
+            </div>
+        </section>
+
+        <!-- ===== CATEGORY PILLS ===== -->
+        <section class="px-4 py-6">
+            <div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2" id="categoryPills">
+                <button data-category="all"
+                    class="category-pill active flex items-center gap-2 px-5 py-2 rounded-full bg-primary text-white text-sm font-semibold shadow-md shadow-primary/20 whitespace-nowrap">
+                    <span class="material-symbols-outlined text-lg">check_circle</span> All
+                </button>
+                <button data-category="general"
+                    class="category-pill flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-sm font-semibold whitespace-nowrap">
+                    <span class="material-symbols-outlined text-lg">health_and_safety</span> General
+                </button>
+                <button data-category="cosmetic"
+                    class="category-pill flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-sm font-semibold whitespace-nowrap">
+                    <span class="material-symbols-outlined text-lg">auto_awesome</span> Cosmetic
+                </button>
+                <button data-category="ortho"
+                    class="category-pill flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-sm font-semibold whitespace-nowrap">
+                    <span class="material-symbols-outlined text-lg">straighten</span> Ortho
+                </button>
+                <button data-category="preventative"
+                    class="category-pill flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-sm font-semibold whitespace-nowrap">
+                    <span class="material-symbols-outlined text-lg">shield_with_heart</span> Preventative
+                </button>
+            </div>
+        </section>
+
+        <!-- ===== SERVICE CARDS ===== -->
+        <section class="px-4 space-y-6" id="serviceCards">
+
+            <!-- General Dentistry -->
+            <div class="service-card bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm transition-transform active:scale-[0.98]"
+                data-category="general" data-name="General Dentistry check-ups x-rays cleanings fillings">
+                <div class="h-40 bg-slate-200 overflow-hidden relative">
+                    <img alt="Modern dental clinic" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoOciaFCxM99TaEXkvGOLOQ61edk4K8Q_70HwylpHblUGSAssjGmcQBId33Mj-EvjDtcUWhM34UHU4png77k-7dvwqBTiFXDDiTgXxCQ4oOb4qsXKcuTbX6JHZKe9tCOHBk7wn8utYAx2wspjiLiFgCodKGEY4lGJoiat64q7lEB2ldQURzZJBCMZ3VImgVRoxggNTieKPgOrNpuntxVxnNrS6XOSRpS88d4PUYAuIg-YaW-fzrV-BGvYjB-Ob2ckOF7PkwFm5OHQ" />
+                    <div
+                        class="absolute top-3 left-3 bg-primary/90 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+                        Most Popular</div>
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">General Dentistry</h3>
+                        <span class="material-symbols-outlined text-primary">stethoscope</span>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                        Comprehensive oral care including regular check-ups, digital x-rays, professional cleanings, and
+                        durable fillings for all ages.
+                    </p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button
+                            class="py-2.5 rounded-lg border-2 border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-colors">Learn
+                            More</button>
+                        <button
+                            class="py-2.5 rounded-lg bg-primary text-white font-bold text-sm shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cosmetic Procedures -->
+            <div class="service-card bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm transition-transform active:scale-[0.98]"
+                data-category="cosmetic" data-name="Cosmetic Procedures whitening veneers bonding smile makeover">
+                <div class="h-40 bg-slate-200 overflow-hidden">
+                    <img alt="Patient smiling" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBZ6r4iMMSCQzyizVn_QEr4u5mpKz-qJZEzMjoNtiZbznXG6pQbV3ZJZ7upyxXYFHJ6UgeYj8hMuf82OOOAYXctutlitfd4CEUGYKpn9JU2z3w6sqLd7Fnc02qxk_LYvGFOYhsxN_x7BC9LTF68LxmcacpO156t0hio4JTe2tFJHAASwUO0zFEX37LKcfXO_7pwaB139xmgN1zA9Gdo6UyexuOOzLcagMslOY4E9TKkWz3FlqQegj83vbH32LHDNien5dovpJQyeY" />
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Cosmetic Procedures</h3>
+                        <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                        Transform your smile with professional teeth whitening, porcelain veneers, dental bonding, and
+                        full smile makeovers.
+                    </p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button
+                            class="py-2.5 rounded-lg border-2 border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-colors">Learn
+                            More</button>
+                        <button
+                            class="py-2.5 rounded-lg bg-primary text-white font-bold text-sm shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orthodontics -->
+            <div class="service-card bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm transition-transform active:scale-[0.98]"
+                data-category="ortho" data-name="Orthodontics Invisalign aligners braces retainers straighten teeth">
+                <div class="h-40 bg-slate-200 overflow-hidden">
+                    <img alt="Invisible aligners" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCibmCjk7IPnHtGAnV8pfDA8N0EtXbCJBExqGb9eRFUOsNlawk6YPl8oTwzlUFlwkVh9ObAOENjXD_Y5qlxoL6jPzy-h-VbdFh2BQ7Ffc49jkGUi18MrfFQ0S2SUnx9n0q7pP2bLUuBkSUSoa6w3xmfF2-Hzevb7bYPStN_i1F4cDiIO86MgYASANQ0gqPBzvJs7JDJNHh8QPY5m7uZi7GNGn4rosIRUQotiSQoS6FccEcMP0KsuyJ-g8ISDWtwI0P02KT9Hc3XAns" />
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Orthodontics</h3>
+                        <span class="material-symbols-outlined text-primary">straighten</span>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                        Straighten your teeth with modern solutions including Invisalign® clear aligners, traditional
+                        braces, and customized retainers.
+                    </p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button
+                            class="py-2.5 rounded-lg border-2 border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-colors">Learn
+                            More</button>
+                        <button
+                            class="py-2.5 rounded-lg bg-primary text-white font-bold text-sm shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preventative Care -->
+            <div class="service-card bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm transition-transform active:scale-[0.98]"
+                data-category="preventative"
+                data-name="Preventative Care sealants fluoride gum health oral cancer screening">
+                <div class="h-40 bg-slate-200 overflow-hidden">
+                    <img alt="Dental tools" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUwFP9348mAYccyADCYuXoRZrBtTnA0CEnM5Jm-OEWRylSJdEmURCLBlUpAa7oqFOpsvTDjkPxHOXglZ2F-ObnugRoOAefblcV-E8oMOhFU0wRrno5y0RbR7X8nFMcRcX_79WZxFeqBZN30IhVDCKL2hz6PTlIK3ag18Y4ajptLoPp5KFGva-qfruqFVvNm35bY8o4nN90F2o35tUnny0__r0SjeXGpSdyEveOqbi47Aehu4dZt1rZPgcnr12FVSAAIowS1-leal0" />
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Preventative Care</h3>
+                        <span class="material-symbols-outlined text-primary">shield_with_heart</span>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                        Stay ahead of issues with specialized sealants, fluoride treatments, gum health screenings, and
+                        oral cancer exams.
+                    </p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button
+                            class="py-2.5 rounded-lg border-2 border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-colors">Learn
+                            More</button>
+                        <button
+                            class="py-2.5 rounded-lg bg-primary text-white font-bold text-sm shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Root Canal Treatment -->
+            <div class="service-card bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm transition-transform active:scale-[0.98]"
+                data-category="general" data-name="Root Canal Treatment endodontic therapy tooth pain infection">
+                <div class="h-40 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-6xl opacity-40">healing</span>
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Root Canal Treatment</h3>
+                        <span class="material-symbols-outlined text-primary">healing</span>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                        Save your natural tooth with painless endodontic therapy using advanced instruments and
+                        single-visit protocols.
+                    </p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button
+                            class="py-2.5 rounded-lg border-2 border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-colors">Learn
+                            More</button>
+                        <button
+                            class="py-2.5 rounded-lg bg-primary text-white font-bold text-sm shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dental Implants -->
+            <div class="service-card bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm transition-transform active:scale-[0.98]"
+                data-category="cosmetic" data-name="Dental Implants tooth replacement crown prosthetic permanent">
+                <div class="h-40 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-6xl opacity-40">dental_hygiene</span>
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Dental Implants</h3>
+                        <span class="material-symbols-outlined text-primary">dental_hygiene</span>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                        Restore missing teeth with permanent, natural-looking implants that feel and function just like
+                        real teeth.
+                    </p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button
+                            class="py-2.5 rounded-lg border-2 border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-colors">Learn
+                            More</button>
+                        <button
+                            class="py-2.5 rounded-lg bg-primary text-white font-bold text-sm shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Care Highlight -->
+            <div class="service-card" data-category="all" data-name="Emergency Dental urgent care 24/7">
+                <div
+                    class="bg-red-50 dark:bg-red-950/20 rounded-2xl p-6 border-2 border-dashed border-red-200 dark:border-red-900/40">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-red-500 text-white p-3 rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined">e911_emergency</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-red-900 dark:text-red-400">Emergency Dental Needs?</h3>
+                            <p class="text-xs text-red-700 dark:text-red-500">Available 24/7 for urgent care</p>
+                        </div>
+                    </div>
+                    <a href="tel:+917901934386"
+                        class="w-full bg-red-600 text-white font-bold py-3 rounded-xl hover:bg-red-700 transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-lg">phone_in_talk</span> Call Now: +91 79019 34386
+                    </a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ===== FLOATING ACTION BUTTON ===== -->
+    <button id="fabBooking"
+        class="fixed right-6 bottom-24 bg-primary text-white size-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-transform z-40">
+        <span class="material-symbols-outlined text-3xl">calendar_add_on</span>
+    </button>
+
+    <!-- ===== BOTTOM NAVIGATION BAR ===== -->
+    <nav
+        class="fixed bottom-0 inset-x-0 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-2 z-50">
+        <div class="flex max-w-lg mx-auto">
+            <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="index.html">
+                <span class="material-symbols-outlined">home</span>
+                <span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+            </a>
+            <a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="services.html">
+                <span class="material-symbols-outlined font-fill">medical_services</span>
+                <span class="text-[10px] font-bold uppercase tracking-tighter">Services</span>
+            </a>
+            <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="index.html#contact">
+                <span class="material-symbols-outlined">location_on</span>
+                <span class="text-[10px] font-bold uppercase tracking-tighter">Clinics</span>
+            </a>
+            <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400"
+                href="index.html#testimonials">
+                <span class="material-symbols-outlined">reviews</span>
+                <span class="text-[10px] font-bold uppercase tracking-tighter">Reviews</span>
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        // Dark Mode
+        const html = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Booking Modal
+        const bookingModal = document.createElement('div');
+        bookingModal.id = 'bookingModal';
+        bookingModal.className = 'fixed inset-0 z-[70] bg-black/50 hidden items-center justify-center p-4';
+        bookingModal.innerHTML = `
+            <div class="bg-white dark:bg-slate-900 rounded-2xl w-full max-w-md p-6 relative">
+                <button id="closeBooking" class="absolute top-4 right-4 size-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <h3 class="text-xl font-bold mb-4">Book Appointment</h3>
+                <form id="bookingForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Name</label>
+                        <input type="text" required class="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Phone</label>
+                        <input type="tel" required class="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800" placeholder="+91 98765 43210">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Service</label>
+                        <select required class="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+                            <option value="">Select service</option>
+                            <option>General Dentistry</option>
+                            <option>Cosmetic Procedures</option>
+                            <option>Orthodontics</option>
+                            <option>Root Canal</option>
+                            <option>Dental Implants</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-primary/90">Book Now</button>
+                </form>
+            </div>
+        `;
+        document.body.appendChild(bookingModal);
+
+        const closeBooking = document.getElementById('closeBooking');
+        const bookingForm = document.getElementById('bookingForm');
+
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.textContent.includes('Book Now')) {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    bookingModal.classList.remove('hidden');
+                    bookingModal.classList.add('flex');
+                });
+            }
+        });
+
+        document.getElementById('fabBooking').addEventListener('click', () => {
+            bookingModal.classList.remove('hidden');
+            bookingModal.classList.add('flex');
+        });
+
+        closeBooking.addEventListener('click', () => {
+            bookingModal.classList.add('hidden');
+            bookingModal.classList.remove('flex');
+        });
+
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) {
+                bookingModal.classList.add('hidden');
+                bookingModal.classList.remove('flex');
+            }
+        });
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you! We will contact you shortly.');
+            bookingModal.classList.add('hidden');
+            bookingModal.classList.remove('flex');
+            bookingForm.reset();
+        });
+
+        // ===== Category Filter =====
+        const pills = document.querySelectorAll('.category-pill');
+        const cards = document.querySelectorAll('.service-card');
+
+        pills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                // Update active pill style
+                pills.forEach(p => {
+                    p.classList.remove('bg-primary', 'text-white', 'shadow-md', 'shadow-primary/20');
+                    p.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-800');
+                });
+                pill.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-800');
+                pill.classList.add('bg-primary', 'text-white', 'shadow-md', 'shadow-primary/20');
+
+                const category = pill.dataset.category;
+
+                cards.forEach(card => {
+                    const cardCat = card.dataset.category;
+                    if (category === 'all' || cardCat === category || cardCat === 'all') {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // ===== Search Filter =====
+        const searchInput = document.getElementById('serviceSearch');
+        searchInput.addEventListener('input', () => {
+            const query = searchInput.value.toLowerCase();
+            cards.forEach(card => {
+                const name = (card.dataset.name || '').toLowerCase();
+                const text = card.textContent.toLowerCase();
+                if (!query || name.includes(query) || text.includes(query)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

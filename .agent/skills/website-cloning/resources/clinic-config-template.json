@@ -1,0 +1,85 @@
+{
+    "business": {
+        "name": "",
+        "tagline": "",
+        "phone": "",
+        "email": "",
+        "address": "",
+        "whatsapp": "",
+        "whatsapp_message": "Hi, I'd like to book a dental appointment.",
+        "working_hours": {
+            "monday": "9:00 AM - 7:00 PM",
+            "tuesday": "9:00 AM - 7:00 PM",
+            "wednesday": "9:00 AM - 7:00 PM",
+            "thursday": "9:00 AM - 7:00 PM",
+            "friday": "9:00 AM - 7:00 PM",
+            "saturday": "9:00 AM - 7:00 PM",
+            "sunday": "Closed"
+        },
+        "google_maps_embed": ""
+    },
+    "doctors": [
+        {
+            "name": "",
+            "title": "BDS, MDS",
+            "specialization": "",
+            "experience": "",
+            "bio": "",
+            "photo": ""
+        }
+    ],
+    "services": [
+        {
+            "name": "",
+            "icon": "",
+            "description": ""
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "",
+            "rating": 5,
+            "text": "",
+            "date": ""
+        }
+    ],
+    "design": {
+        "colors": {
+            "primary": "#2563EB",
+            "secondary": "#10B981",
+            "accent": "#F59E0B",
+            "background": "#FFFFFF",
+            "text": "#1E293B",
+            "muted": "#64748B"
+        },
+        "fonts": {
+            "primary": "Inter",
+            "secondary": "Poppins"
+        },
+        "style_keywords": ""
+    },
+    "sections": [
+        "navigation",
+        "hero",
+        "services",
+        "about",
+        "testimonials",
+        "contact",
+        "footer"
+    ],
+    "ctas": [
+        "Book Appointment",
+        "Call Now"
+    ],
+    "navigation": [
+        "Home",
+        "Services",
+        "About",
+        "Contact"
+    ],
+    "seo": {
+        "title": "",
+        "description": "",
+        "keywords": ""
+    }
+}
