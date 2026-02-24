@@ -60,12 +60,30 @@ export default function HomePage() {
     return (
         <>
             {/* ─── Hero ─────────────────────────────────────────────── */}
-            <section className="relative min-h-[85svh] flex flex-col items-center justify-center overflow-hidden px-4 pt-20 pb-10 text-center">
-                {/* Background blobs */}
-                <div className="absolute -top-32 -right-32 size-80 rounded-full bg-primary/20 blur-3xl" />
-                <div className="absolute -bottom-20 -left-20 size-64 rounded-full bg-primary/10 blur-3xl" />
+            <section className="px-4 pt-20 pb-10 bg-white dark:bg-background-dark">
+                {/* Image Block with fixes for structural errors in index.html */}
+                <div className="relative w-full rounded-3xl overflow-hidden min-h-[250px] sm:min-h-[350px] md:min-h-[450px] bg-slate-200 dark:bg-slate-800 mb-10 shadow-xl max-w-5xl mx-auto">
+                    <img
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOcSkv53TpVmF9PAFuFBAYtpT1dIQJiP725LdQsCIz_3lNbl7Vr7cu4ES4_y6D6TYzdFkVUl9u8Q2si_wnIOXoJ3gzCqPXKBhBn4_7s9gJgJyTw-qoYxjPBDg_U_DQDbJlRMneNzckW2uD6zOrkb46AcV1NMxiHq5szuQTnqm2Ppn7H5eJhb-0lixB5qAuaGFV-u1qKez1NAdoKE6okap8Qgn7Kf01OfswAHecLw0cfM7T-JoRVYk0xdTuvA6T2Ba94HG_lRuzw0w"
+                        alt="SmileBright Dental Clinic interior"
+                        className="absolute inset-0 w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent pointer-events-none" />
 
-                <div className="relative z-10 max-w-2xl mx-auto space-y-6">
+                    {/* Rating Badge */}
+                    <div className="absolute top-4 left-4 bg-amber-400/95 text-slate-900 text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5 shadow-lg backdrop-blur-sm">
+                        <span className="material-symbols-outlined text-sm font-fill">star</span>
+                        5.0 — Ludhiana&apos;s #1 Dedicated Clinic
+                    </div>
+
+                    {/* Open Hours pill */}
+                    <div className="absolute top-4 right-4 bg-green-500/90 text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-lg backdrop-blur-sm">
+                        <span className="size-2 bg-white rounded-full animate-pulse shadow-[0_0_8px_white]" />
+                        Open Now
+                    </div>
+                </div>
+
+                <div className="relative z-10 max-w-2xl mx-auto space-y-6 text-center">
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 text-sm font-semibold">
                         <span className="material-symbols-outlined text-base font-fill">verified</span>
