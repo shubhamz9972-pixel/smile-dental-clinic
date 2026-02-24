@@ -5,11 +5,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z2JV03GWN"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-9Z2JV03GWN');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9Z2JV03GWN');
     </script>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -147,23 +147,59 @@
         <main class="flex-1 pb-24">
 
             <!-- ===== HERO SECTION ===== -->
-            <section class="p-4 @container">
-                <div class="relative flex flex-col justify-end overflow-hidden rounded-xl min-h-[420px] bg-slate-200"
-                    style='background-image: linear-gradient(to top, rgba(19, 127, 236, 0.8) 0%, rgba(0, 0, 0, 0.1) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOcSkv53TpVmF9PAFuFBAYtpT1dIQJiP725LdQsCIz_3lNbl7Vr7cu4ES4_y6D6TYzdFkVUl9u8Q2si_wnIOXoJ3gzCqPXKBhBn4_7s9gJgJyTw-qoYxjPBDg_U_DQDbJlRMneNzckW2uD6zOrkb46AcV1NMxiHq5szuQTnqm2Ppn7H5eJhb-0lixB5qAuaGFV-u1qKez1NAdoKE6okap8Qgn7Kf01OfswAHecLw0cfM7T-JoRVYk0xdTuvA6T2Ba94HG_lRuzw0w"); background-size: cover; background-position: center;'>
+            <section class="px-4 pt-4 pb-2 @container">
+                <!-- Image Block -->
+                <div class="relative w-full rounded-2xl overflow-hidden min-h-[220px] sm:min-h-[320px] md:min-h-[400px] bg-slate-200"></div>
+                    <!-- Hero image using img tag for reliable rendering -->
+                    <img
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOcSkv53TpVmF9PAFuFBAYtpT1dIQJiP725LdQsCIz_3lNbl7Vr7cu4ES4_y6D6TYzdFkVUl9u8Q2si_wnIOXoJ3gzCqPXKBhBn4_7s9gJgJyTw-qoYxjPBDg_U_DQDbJlRMneNzckW2uD6zOrkb46AcV1NMxiHq5szuQTnqm2Ppn7H5eJhb-0lixB5qAuaGFV-u1qKez1NAdoKE6okap8Qgn7Kf01OfswAHecLw0cfM7T-JoRVYk0xdTuvA6T2Ba94HG_lRuzw0w"
+                        alt="SmileBright Dental Clinic interior"
+                        class="absolute inset-0 w-full h-full object-cover object-center"
+                        loading="eager"
+                    />
+                    <!-- Subtle top gradient for badge readability -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent pointer-events-none"></div>
                     <!-- Rating Badge -->
-                    <div
-                        class="absolute top-4 left-4 bg-amber-400/90 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1">
-                        <span class="material-symbols-outlined text-sm font-fill">star</span> 5.0 — Ludhiana's Trusted
+                    <div class="absolute top-3 left-3 bg-amber-400/95 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1 shadow-sm">
+                        <span class="material-symbols-outlined text-sm font-fill">star</span> 5.0 — Ludhiana's #1 Clinic
                     </div>
-                    <div class="p-6 space-y-4">
-                        <h1 class="text-white text-3xl font-extrabold leading-tight tracking-tight drop-shadow-sm">
-                            Your Journey to a Perfect Smile Starts Here</h1>
-                        <p class="text-white/90 text-sm font-medium leading-relaxed max-w-xs">Experience professional
-                            dental care in a comfortable and modern environment.</p>
+                    <!-- Open Hours pill -->
+                    <div class="absolute top-3 right-3 bg-green-500/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                        <span class="size-1.5 bg-white rounded-full animate-pulse inline-block"></span> Open Now
+                    </div>
+                </div>
+
+                <!-- Content Block -->
+                <div
+                    class="mt-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm p-5 space-y-3">
+                    <!-- Tagline chip -->
+                    <span
+                        class="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-3 fill-primary" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                        Smile. Relax. Repeat.
+                    </span>
+                    <!-- Heading -->
+                    <h1
+                        class="text-slate-900 dark:text-slate-100 text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight tracking-tight">
+                        Perfect Smiles,<br class="sm:hidden"> Painless Care
+                    </h1>
+                    <!-- Sub-copy -->
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Expert dental care in Ludhiana — gentle, modern &amp; trusted by 1000+ patients.
+                    </p>
+                    <!-- CTA row -->
+                    <div class="flex flex-col sm:flex-row gap-3 pt-1">
                         <button data-open-booking
-                            class="flex w-full cursor-pointer items-center justify-center rounded-lg h-14 px-6 bg-white text-primary text-base font-bold shadow-lg hover:bg-slate-50 transition-colors">
-                            Book Appointment
+                            class="flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-xl h-13 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 active:scale-[0.98] transition-all">
+                            <span class="material-symbols-outlined text-lg">calendar_add_on</span> Book Appointment
                         </button>
+                        <a href="tel:+917901934386"
+                            class="flex items-center justify-center gap-2 rounded-xl h-13 px-5 border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                            <span class="material-symbols-outlined text-lg">call</span> Call Now
+                        </a>
                     </div>
                 </div>
             </section>
